@@ -638,8 +638,8 @@ h3 {
   max-width: 520px;
 }
 
-.about-copy span,
-.custom-copy span {
+.about-copy > span,
+.custom-copy > span {
   display: block;
   width: 54px;
   height: 1px;
@@ -2671,8 +2671,8 @@ h3 {
     justify-items: center;
   }
 
-  .about-copy span,
-  .custom-copy span,
+  .about-copy > span,
+  .custom-copy > span,
   .work-together-copy span {
     margin-left: auto;
     margin-right: auto;
