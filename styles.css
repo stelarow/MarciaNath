@@ -2007,6 +2007,34 @@ h3 {
   margin-left: auto;
 }
 
+.story-commercial-gallery {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: clamp(18px, 2.6vw, 34px);
+  width: min(100% - 44px, 1120px);
+  margin: 0 auto;
+  padding: clamp(24px, 4vw, 48px) 0 clamp(76px, 8vw, 118px);
+}
+
+.story-commercial-gallery figure {
+  overflow: hidden;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.story-commercial-gallery figure:first-child {
+  transform: translateY(clamp(16px, 3vw, 38px));
+}
+
+.story-commercial-gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+}
+
 .story-page--facades .story-media--single img {
   min-height: 430px;
 }
@@ -2178,6 +2206,25 @@ h3 {
   height: auto;
   aspect-ratio: 16 / 10;
   min-height: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+.story-inspiration-feature {
+  width: min(100% - 44px, 520px);
+  margin: 0 auto;
+  padding: clamp(18px, 3vw, 34px) 0 clamp(76px, 8vw, 118px);
+}
+
+.story-inspiration-feature figure {
+  margin: 0;
+}
+
+.story-inspiration-feature img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
   object-position: center;
 }
@@ -3537,6 +3584,20 @@ h3 {
     width: 100%;
   }
 
+  .story-commercial-gallery {
+    grid-template-columns: 1fr;
+    width: calc(100% - 28px);
+    padding: 0 0 72px;
+  }
+
+  .story-commercial-gallery figure:first-child {
+    transform: none;
+  }
+
+  .story-commercial-gallery img {
+    aspect-ratio: 4 / 5;
+  }
+
   .story-page--inspiration .story-section.story-section--clipping {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -3587,6 +3648,11 @@ h3 {
   .story-page--inspiration .story-section--atmosphere .story-copy,
   .story-page--inspiration .story-media--atmosphere {
     grid-column: 1;
+  }
+
+  .story-inspiration-feature {
+    width: min(calc(100% - 28px), 460px);
+    padding: 0 0 72px;
   }
 
   .story-page--inspiration .story-media--atmosphere {
